@@ -1,2 +1,2 @@
 # Team_2
-Smart Home System Project 
+This is a github repository featuring the Smart Home System project done by Mind Cloud's Team 2.
