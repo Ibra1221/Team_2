@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/faceRec.css') }}">
+</head>
+<body>
+    
+        <div class="content">
+            <div class="head">
+    
+                <button id="snap">capture</button>
+            </div>
+            <div class="faceRec">
+                <form action="/face_recognize" method="post" enctype="multipart/form-data"></form>
+                <video id="webcam" autoplay class="hide"></video>
+            </div>
+            <div class="buttons">
+                <input type="submit" id="face" value="Face Recognition">
+                <input onkeyup="validPass(this.value)" type="password" id="enterPass" placeholder="Enter Password">
+                <p id="validPass"></p>
+                <input type="submit" id="changePass" value="Change Password">
+                <div id="change" class="hide">
+                    <input type="password" id="newPass" placeholder="New Password">
+                    <div id="accept">
+                        <button id="confirm" onclick="confirmPass()">Confirm</button>
+                        <button id="cancel">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+   
+    
+    <script src="{{ url_for('static', filename='js/faceRec.js') }}"></script>
+</body>
+</html>
